@@ -1,0 +1,192 @@
+@import "../../resources/styles/_mixins.scss";
+
+.searching {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  line-height: 120%;
+  font-family: Inter500;
+  color: #fff;
+  align-items: center;
+  position: relative;
+
+  &-dropdown {
+    z-index: 10000;
+    max-width: auto;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    background-color: rgb(white, 95%);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #549ff6;
+
+    &-item {
+      @include reset-link;
+      cursor: pointer;
+      font-size: 22px;
+      line-height: 120%;
+      margin: 0 auto;
+      padding: 5px 20px 5px 20px;
+      height: 45px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 100%;
+
+      &-city {
+        @include reset-model;
+        max-width: 80%;
+
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      &-flag {
+        width: 30px;
+      }
+    }
+  }
+
+  &-input-style {
+    background-color: rgb(white, 30%);
+    border-radius: 20px;
+  }
+
+  &-input-style-active {
+    background-color: rgb(white, 95%);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  &-city {
+    font-size: 28px;
+    padding-left: 11px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 80%;
+    @media screen and (max-width: 1200px) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: 661px) {
+      font-size: 22px;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 20px;
+    }
+  }
+
+  &-city::before {
+    content: url("../../resources/images/map-location-svgrepo-com.svg");
+    width: 30px;
+    position: relative;
+    top: 2px;
+    left: -10px;
+  }
+
+  &-button-open {
+    min-width: 60px;
+    height: 60px;
+    @include reset-button;
+    background-color: rgb(white, 20%);
+    border-radius: 20px;
+
+    &-left {
+      @media screen and (max-width: 661px) {
+        min-width: 45px;
+        height: 45px;
+        border-radius: 15px;
+      }
+    }
+  }
+
+  &-button-open::before {
+    content: url("../../resources/images/Vector.svg");
+    position: relative;
+    top: 2px;
+  }
+
+  &-button-close {
+    z-index: 1000;
+    min-width: 60px;
+    height: 60px;
+    @include reset-button;
+
+    &-left {
+      @media screen and (max-width: 661px) {
+        width: 100%;
+        height: 45px;
+        border-radius: 15px;
+      }
+    }
+  }
+
+  &-button-close::before {
+    content: url("../../resources/images/close-svgrepo-com-NA.svg");
+    position: relative;
+    top: 2px;
+  }
+
+  &-button-close-active::before {
+    content: url("../../resources/images/close-svgrepo-com.svg");
+    position: relative;
+    top: 2px;
+  }
+
+  &-input {
+    @include reset-input;
+    z-index: 10;
+    width: 110%;
+    height: 60px;
+    color: #fff;
+    padding-left: 20px;
+  }
+
+  &-input-active {
+    @include reset-input;
+    z-index: 10;
+    width: 110%;
+    height: 60px;
+    color: #549ff6;
+    padding-left: 20px;
+  }
+
+  &-input::before {
+    width: 20px;
+    height: 60px;
+    background-color: rgb(white, 20%);
+  }
+
+  &-input::placeholder {
+    color: #fff;
+  }
+
+  &-left {
+    margin: 0px;
+    display: none;
+    max-width: 100%;
+    width: 100%;
+
+    @media screen and (max-width: 1300px) {
+      display: flex;
+      margin-bottom: 30px;
+    }
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0px;
+    }
+  }
+
+  &-right {
+    margin: 0 auto;
+
+    @media screen and (max-width: 1300px) {
+      display: none;
+    }
+  }
+}

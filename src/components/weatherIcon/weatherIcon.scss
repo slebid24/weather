@@ -1,0 +1,30 @@
+.leftside_weather-icon {
+  display: flex;
+  height: 40px;
+  @media screen and (max-width: 661px) {
+    height: 20px;
+  }
+
+  &-inner {
+    width: 250px;
+    position: relative;
+    @media screen and (max-width: 1200px) {
+      width: 200px;
+    }
+    @media screen and (max-width: 661px) {
+      width: 120px;
+    }
+  }
+
+  &-img {
+    position: absolute;
+    top: -64px;
+    left: 45px;
+    opacity: 70%;
+    @media screen and (max-width: 1200px) {
+      width: 180px;
+      top: -30px;
+      left: 50px;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import "../../resources/styles/_mixins.scss";
+
+.leftside_weather_temp {
+  display: flex;
+  &-inner {
+    position: relative;
+  }
+  &-integer {
+    @include reset-model;
+    font-size: 164px;
+    line-height: 120%;
+    font-family: Inter100;
+    color: #fff;
+    text-shadow: rgb(0, 0, 0, 30%) -3px 2px;
+    @media screen and (max-width: 1200px) {
+      font-size: 140px;
+    }
+    @media screen and (max-width: 661px) {
+      font-size: 110px;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 100px;
+    }
+  }
+
+  &-type {
+    @include reset-model;
+    position: absolute;
+    top: 10px;
+    left: 105%;
+    font-size: 32px;
+    line-height: 120%;
+    color: #fff;
+    font-family: Inter400;
+    text-shadow: rgb(0, 0, 0, 30%) -4px 2px;
+    @media screen and (max-width: 1200px) {
+      font-size: 28px;
+    }
+    @media screen and (max-width: 661px) {
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+   "compilerOptions": {
+    "baseUrl": "src",
+    "composite": true,
+
+    "target": "es2016",
+     "module": "commonjs",
+     "moduleResolution": "node",
+     "esModuleInterop": true,
+     "outDir": "./dist/",
+     "noImplicitAny": true,
+     "skipLibCheck": true,
+     "jsx": "react",
+     "noFallthroughCasesInSwitch": true,
+     "forceConsistentCasingInFileNames": true,
+     "noImplicitReturns": true,
+     "allowSyntheticDefaultImports": true,
+     "strict": false,
+     "noUnusedLocals": true,
+   }
+ }

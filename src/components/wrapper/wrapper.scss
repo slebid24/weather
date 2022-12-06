@@ -1,0 +1,24 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(248.66deg, #a8c8ed 0%, #7673dc 100%);
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 5px 30px 5px 30px;
+  @media screen and (max-width: 550px) {
+    padding: 20px 10px 20px 10px;
+  }
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 1300px) {
+    flex-wrap: wrap;
+  }
+}

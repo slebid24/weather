@@ -1,0 +1,42 @@
+@import "../../resources/styles/_mixins.scss";
+
+.leftside_temp-buttons {
+  display: flex;
+  justify-content: flex-end;
+  @media screen and (max-width: 1300px) {
+    display: none;
+  }
+  &-inner {
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    height: 40px;
+    background-color: (rgb(255, 255, 255, 18%));
+    border-radius: 20px;
+  }
+
+  &-f {
+    height: 40px;
+    width: 50px;
+    @include reset-button;
+    font-family: Inter400;
+    color: #fff;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &-c {
+    height: 40px;
+    width: 46px;
+    @include reset-button;
+    font-family: Inter400;
+    color: #fff;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &-active {
+    background-color: (rgb(255, 255, 255, 30%));
+    border-radius: 20px;
+  }
+}

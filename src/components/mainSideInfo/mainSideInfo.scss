@@ -1,0 +1,26 @@
+.leftside_wrapper {
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
+  @media screen and (max-width: 661px) {
+    display: flex;
+  }
+  @media screen and (max-width: 550px) {
+  }
+  @media screen and (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.leftside_r-inner {
+  @media screen and (max-width: 1200px) {
+    width: 30%;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
+}

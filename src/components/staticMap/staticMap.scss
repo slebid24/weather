@@ -1,0 +1,33 @@
+.rightside-top {
+  @media screen and (max-width: 1300px) {
+    width: 49%;
+  }
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+.static_map {
+  margin-top: 25px;
+  display: flex;
+  height: 300px;
+
+  @media screen and (max-width: 1300px) {
+    margin-top: 0px;
+    height: 280px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-right: 0px;
+    justify-content: space-between;
+  }
+  @media screen and (max-width: 500px) {
+    margin-top: 0px;
+    height: 218px;
+  }
+
+  &-img {
+    border-radius: 20px;
+    object-fit: cover;
+  }
+}

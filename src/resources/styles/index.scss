@@ -1,0 +1,60 @@
+@import "_fonts.scss";
+@import "_mixins.scss";
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  @include reset-model;
+  height: 100vh;
+}
+
+body:focus-visible {
+  outline: -webkit-focus-ring-color auto 0px;
+  outline-color: -webkit-focus-ring-color;
+  outline-style: auto;
+  outline-width: 0px;
+}
+
+.global_error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Inter400;
+  color: #fff;
+}
+
+.spinner {
+  &-time {
+    display: flex;
+    justify-content: center;
+    max-height: 82px;
+
+    &-inner {
+      @media screen and (max-width: 550px) {
+      }
+      @media screen and (max-width: 450px) {
+        height: 80px;
+      }
+    }
+  }
+
+  &-secSide {
+    width: 100%;
+    position: relative;
+
+    &-inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
